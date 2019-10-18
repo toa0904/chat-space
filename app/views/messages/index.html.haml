@@ -8,10 +8,10 @@
         %p.side-header__box__user-name seo
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group  
-            %a{:href => //}
+            =link_to {:href => //} do
               %i.fa.fa-edit
           %li.side-header__box__menu__edit-user
-            %a{:href => //}
+            =link_to {:href => //} do
               %i.fa.fa-cog
 
     .groups
@@ -31,7 +31,7 @@
           %li.main-header__left-box__member-list__member
             seo neko 
       .main-header__edit-btn
-        %a{:href => //}
+        =link_to {:href => //} do
           Edit 
 
     .messages
