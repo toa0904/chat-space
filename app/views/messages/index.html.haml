@@ -1,66 +1,65 @@
-%body
-  .flash-box
-    .notice
-      グループを作成しました
-  .wrapper
-    .chat-side
-      .side-header
-        .side-header__box
-          %p.side-header__box__user-name seo
-          %ul.side-header__box__menu
-            %li.side-header__box__menu__new-group  
-              %a{:href => //}
-                %i.fa.fa-edit
-            %li.side-header__box__menu__edit-user
-              %a{:href => //}
-                %i.fa.fa-cog
+.flash-box
+   .notice
+     グループを作成しました
+.wrapper
+  .chat-side
+    .side-header
+      .side-header__box
+        %p.side-header__box__user-name seo
+        %ul.side-header__box__menu
+          %li.side-header__box__menu__new-group  
+            %a{:href => //}
+              %i.fa.fa-edit
+          %li.side-header__box__menu__edit-user
+            %a{:href => //}
+              %i.fa.fa-cog
 
-      .groups
-        .group
-          %p.group__group-name 
-            sample
-          %p.group__latest-message  
-            good bye world!
+    .groups
+      .group
+        %p.group__group-name 
+          sample
+        %p.group__latest-message  
+          good bye world!
 
-    .chat-main
-      .main-header
-        .main-header__left-box
-          %h2.main-header__left-box__current-group
-            sample
-          %ul.main-header__left-box__member-list  
-            Member :
-            %li.main-header__left-box__member-list__member
-              seo neko 
-        .main-header__edit-btn
-          %a{:href => //}
-            Edit 
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group
+          sample
+        %ul.main-header__left-box__member-list  
+          Member :
+          %li.main-header__left-box__member-list__member
+            seo neko 
+      .main-header__edit-btn
+        %a{:href => //}
+          Edit 
 
-      .messages
-        .message
-          .message__upper-info
-            %p.message__upper-info__talker
-              seo
-            %p.message__upper-info__date 
-              2019/10/16 20:18:00
-          %p.message__text
-            こんにちは
+    .messages
+      .message
+        .message__upper-info
+          %p.message__upper-info__talker
+            seo
+          %p.message__upper-info__date 
+            2019/10/16 20:18:00
+        %p.message__text
+          こんにちは
 
-        .message
-          .message__upper-info
-            %p.message__upper-info__talker
-              neko
-            %p.message__upper-info__date 
-              2019/10/16 20:30:00
-          %p.message__text
-            さようなら 
+      .message
+        .message__upper-info
+          %p.message__upper-info__talker
+            neko
+          %p.message__upper-info__date 
+            2019/10/16 20:30:00
+        %p.message__text
+          さようなら 
 
-      .form 
-        %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/2472/messages", :enctype => "multipart/form-data", :method => "post"}
-          %input{:name => "utf8", :type => "hidden", :value => "✓"}/ 
-          %input{:name => "authenticity_token", :type => "hidden", :value => "La6jCgAWr/p3Maz1p+Vk/dTX0wFx4dDLxZABqO4AoeUjujMPvGunRAdApH6GQC3P63732TA+cv9XNJV1OfhgXQ=="}/
-          .input-box
-            %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-            %label.input-box__image{:for => "message_image"} 
-              %i.fa.fa-image
-                %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-            %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/ 
+    .form 
+      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/2472/messages", :enctype => "multipart/form-data", :method => "post"}
+        %input{:name => "utf8", :type => "hidden", :value => "✓"}/ 
+        %input{:name => "authenticity_token", :type => "hidden", :value => "La6jCgAWr/p3Maz1p+Vk/dTX0wFx4dDLxZABqO4AoeUjujMPvGunRAdApH6GQC3P63732TA+cv9XNJV1OfhgXQ=="}/
+        .input-box
+          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          %label.input-box__image{:for => "message_image"} 
+            %i.fa.fa-image
+              %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
+          %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/ 
