@@ -1,6 +1,8 @@
 class GroupsController < ApplicationController
-  # before_action :set_group, only: [:edit, :update]
+  before_action :set_group, only: [:edit, :update]
+
   def index
+    @message = Message.new
   end
 
   def new
@@ -15,9 +17,6 @@ class GroupsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def edit
   end
 
   def update
