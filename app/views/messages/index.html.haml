@@ -24,11 +24,11 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group
-          sample
+          = @group.name
         %ul.main-header__left-box__member-list  
           Member :
           %li.main-header__left-box__member-list__member
-            seo neko 
+            = current_user.name 
       .main-header__edit-btn
         %a{:href => //}
           Edit 
