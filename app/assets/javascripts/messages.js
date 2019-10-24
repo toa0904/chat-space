@@ -57,7 +57,7 @@ $(function(){
       $('.messages').append(html)
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       $('#from__message').val(''); 
-      $('form')[0].reset();
+      $('form')[0].reset(); 
     })
     .fail(function(){
       alert('エラー');
